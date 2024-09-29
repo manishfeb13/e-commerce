@@ -1,0 +1,17 @@
+<form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit(loginFormGroup)" class="loginFormGroup">
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" formControlName="username">
+    </div>
+
+    <div>
+        <label for="password">Password: </label>
+        <input type="text" id="password" name="password" formControlName="password">
+        <span><button (click)="toggle()">i</button></span>
+    </div>
+    
+    <button type="submit">Login</button>
+
+</form>
+
+{{passwordHide}}
