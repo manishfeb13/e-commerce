@@ -1,4 +1,4 @@
-<form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit(loginFormGroup)" class="loginFormGroup">
+<form [formGroup]="loginFormGroup" #myloginform= 'ngForm' (ngSubmit)="onSubmit(loginFormGroup)" class="loginFormGroup">
     <div>
         <label for="username">Username: </label>
         <input type="text" id="username" name="username" formControlName="username">
@@ -6,12 +6,13 @@
 
     <div>
         <label for="password">Password: </label>
-        <input type="text" id="password" name="password" formControlName="password">
-        <span><button (click)="toggle()">i</button></span>
+        <input [type]= "textFieldTypeisPass ? 'password' : 'text'" id="password" name="password" formControlName="password">
+        <i (click)="toggle()">{{passHideShow}}</i>
     </div>
+
+    <p style="color: red;" *ngIf="incorrectCredentials && myloginform.submitted">Please enter correct credentials.</p>
+
+    <button type="submit" [disabled]="!loginFormGroup.valid">Login</button>
     
-    <button type="submit">Login</button>
 
 </form>
-
-{{passwordHide}}
