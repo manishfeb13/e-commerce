@@ -9,7 +9,7 @@
     <div>
         <label for="password">Password: </label>
         <input [type]= "textFieldTypeisPass ? 'password' : 'text'" id="password" name="password" formControlName="password">
-        <i (click)="toggle()">{{passHideShow}}</i>
+        <i (click)="toggle()" class="passHideShowToggle">{{passHideShow}}</i>
     </div>
 
     <p style="color: red;" *ngIf="incorrectCredentials && myloginform.submitted">Please enter correct credentials.</p>
