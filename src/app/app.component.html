@@ -1,1 +1,61 @@
-<router-outlet></router-outlet>
+<mat-toolbar>
+    <button mat-icon-button (click)="toggleSideNav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="navigate" (click)="navigate('')">Ecommerce App</span>
+    <span class="spacer"></span>
+
+
+    <mat-card appearance="outlined" class="navigate tab"  (click)="navigate('mens-fashion')">
+        <mat-card-content>Men's Fashion</mat-card-content>
+      </mat-card>
+
+  <mat-card appearance="outlined" class="tab">
+    <mat-card-content>Electronics</mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="tab">
+    <mat-card-content>Groceries</mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="tab">
+    <mat-card-content>Accessories</mat-card-content>
+  </mat-card>
+
+  <span class="spacer"></span>
+
+    <button mat-icon-button>
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-drawer-container class="sideNav-container">
+    <mat-drawer mode="side" [opened]="sideNavOpen">
+
+            <mat-card appearance="outlined" class="navigate" (click)="navigate('mens-fashion')">
+                <mat-card-content>Men's Fashion</mat-card-content>
+              </mat-card>
+        
+
+          <mat-card appearance="outlined">
+            <mat-card-content>Electronics</mat-card-content>
+          </mat-card>
+
+          <mat-card appearance="outlined">
+            <mat-card-content>Groceries</mat-card-content>
+          </mat-card>
+
+          <mat-card appearance="outlined">
+            <mat-card-content>Accessories</mat-card-content>
+          </mat-card>
+
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
