@@ -1,0 +1,26 @@
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+
+
+  .title{
+    text-align: center;
+  }
+
+  .flex-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .temp{
+    font-weight: 480;
+    background-color: #005cbb;
+    margin: 8px 15px 6px 15px;
+    border: 1px solid black;
+    border-radius: 7px;
+    color: #ffffff;
+  }

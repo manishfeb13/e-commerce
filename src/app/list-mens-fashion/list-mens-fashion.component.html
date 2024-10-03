@@ -7,7 +7,7 @@
               <mat-card-title class="product-heading">{{item.product}}: {{item.price | currency: 'INR'}}</mat-card-title>
             </mat-card-header>
             <img mat-card-image class="product-img" src={{item.img}}>
-            <button mat-button class="cart-button" (click)="openAddToCartDialog()">Add to cart</button>
+            <button mat-button class="cart-button" (click)="openAddToCartDialog(item)">Add to cart</button>
             <mat-card-content>
               <p>{{item.description}}</p>
             </mat-card-content>

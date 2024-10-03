@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { ActivatedRoute, Route } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +17,8 @@ import { ListMensFashionComponent } from './list-mens-fashion/list-mens-fashion.
 import {MatChipsModule} from '@angular/material/chips';
 import { CartComponent } from './cart/cart.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { OrderDialogComponent } from './order-dialog/order-dialog.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     LoginComponent,
     UserAccountComponent,
     ListMensFashionComponent,
-    CartComponent
+    CartComponent,
+    OrderDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSidenavModule,
     MatCardModule,
     MatChipsModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
