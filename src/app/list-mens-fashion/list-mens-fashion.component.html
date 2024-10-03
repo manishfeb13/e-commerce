@@ -1,0 +1,24 @@
+
+<div class="flex">
+    <div *ngFor="let item of items" class="item">
+
+        <mat-card class="card" appearance="outlined">
+            <mat-card-header>
+              <mat-card-title class="product-heading">{{item.product}}: {{item.price | currency: 'INR'}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image class="product-img" src={{item.img}}>
+            <button mat-button class="cart-button" (click)="openAddToCartDialog()">Add to cart</button>
+            <mat-card-content>
+              <p>{{item.description}}</p>
+            </mat-card-content>
+            <mat-card-footer class="card-footer">
+              <mat-chip-set aria-label="tags">
+                <ng-container *ngFor="let tag of item.tags">
+                    <mat-chip class="tag">{{tag}}</mat-chip>
+                </ng-container>
+              </mat-chip-set>
+            </mat-card-footer>
+          </mat-card>
+    
+    </div>
+</div>
